@@ -105,9 +105,9 @@ if __name__ == "__main__":
     subject.attach(observer_a)
     observer_b = ConcreteObserverB()
     subject.attach(observer_b)
+    # subject.detach(observer_a) # comment this out
     observer_c = ConcreteObserverC()
     subject.attach(observer_c)
     subject.some_business_logic()
     subject.some_business_logic()
-    # subject.detach(observer_a)
     subject.some_business_logic()
