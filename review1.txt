@@ -1,0 +1,24 @@
+Review Exercise 1
+=================  about 1hr (until around 2:45 ish)
+Imagine some critical events that may happen, and which more than one subsystem needs to respond to
+For example:
+  Temperature changes (with min/max)
+  Data-throughput changes (notify if near limits)
+  Asset availability (with a time-limit on access)
+  Automation events (starting, stopping, taking readings, writing logs)
+  Test runners
+
+Implement an observable subject which carries out some relevant logic over a period of time
+Then implement more than one subscriber which will observe the subject and be notified of events
+
+Exercise the code by making relevant logical changes to the observable subject
+Show that the observers respond to these changes
+Handle edge-cases and exceptions
+
+If time
+-------
+Either ask the user how many subscribers or randomly add and remove subscribers as time passes
+
+Optional
+--------
+Also use other design patterns, such as state or factory to make your code more robust and abstract
