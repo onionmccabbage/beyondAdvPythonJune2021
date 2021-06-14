@@ -86,17 +86,17 @@ attached to.
 class ConcreteObserverA(Observer):
     def update(self, subject: Subject):
         if subject._state < 3:
-            print("ConcreteObserverA: Reacted to low the event")
+            print("ConcreteObserverA: Reacted to 'lower than three' event")
 
 class ConcreteObserverB(Observer):
     def update(self, subject: Subject):
         if subject._state == 0 or subject._state >= 2:
-            print("ConcreteObserverB: Reacted to the event")
+            print("ConcreteObserverB: Reacted to 'zero or exceeds two' event")
 
 class ConcreteObserverC(Observer):
     def update(self, subject: Subject):
         if subject._state >= 8:
-            print("ConcreteObserverC: Reacted to the excess event")
+            print("ConcreteObserverC: Reacted to 'exceeds seven' event")
 
 if __name__ == "__main__":
     # The client code.
