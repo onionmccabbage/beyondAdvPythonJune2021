@@ -1,0 +1,23 @@
+Review 3 - Testing and Timing
+=============================
+For this exercise, use any of the previous review exercises, or my solutions to those exercises
+
+Construct some useful unit tests to run against parts of your app (e.g. the weather service)
+Tests should fail if outcomes are not as expected
+Also test that exceptions are thrown as expected
+Make sure to test likely edge-cases and outcomes that could possibly occur
+
+Gather some timing metrics by using timeit to decorate some of your functions
+Experiement with alternative structures for some functions to see if their time can be improved
+For example, populate a Weather class compared to creating an object with relevant properties
+Ensure the tests still pass after any changes you make
+
+Optional
+--------
+Write a module called preparation.py which asks the user to enter some default values to
+use in the weather app
+This module should provide defaults for city/cities, which metrics are required etc.
+(possibly in a named tuple)
+Persist these values in a simple text file
+When the weather app starts, read this configuration file and use the defaults
+Include an option to use defaults which are known values that tests might expect
