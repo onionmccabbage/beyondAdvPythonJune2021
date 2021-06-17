@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>User Name</title>
+</head>
+<body>
+    <article>
+        <nav>
+            <a href='http://127.0.0.1:5000/osm'>Map</a> |
+            <a href='http://127.0.0.1:5000/home'>Home</a> |
+            <a href='http://127.0.0.1:5000/kitten'>Kitten</a>
+        </nav>
+        <section>
+            <h2>Welcome to this Flask Micro Service</h2>
+            {% if name %}
+                <h3>Greetings {{name}}</h3>
+            {% else %}
+                <h3>Greeting Anonymous</h3>
+            {% endif %}
+        </section>
+    </article>
+</body>
+</html>

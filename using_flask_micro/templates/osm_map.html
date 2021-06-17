@@ -1,0 +1,17 @@
+<script src="http://cdnjs.cloudflare.com/ajax/libs/openlayers/2.11/OpenLayers.js"></script>
+<aside id='basicMap'>
+</aside>
+<script>
+    let lon = '{{lon}}' // this is a Flask data binding (to 'lon' parameter)
+    let lat = '{{lat}}' // NB it MUST be a string
+
+    const map = new OpenLayers.Map("basicMap");
+    let mapnik         = new OpenLayers.Layer.OSM()
+    let fromProjection = new OpenLayers.Projection("EPSG:4326")   // Transform from WGS 1984
+    let toProjection   = new OpenLayers.Projection("EPSG:900913") // to Spherical Mercator Projection
+    let position       = new OpenLayers.LonLat(lon,lat).transform( fromProjection, toProjection);
+    let zoom           = 18
+
+    map.addLayer(mapnik)
+    map.setCenter(position, zoom)
+</script>
