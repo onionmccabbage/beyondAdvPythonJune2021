@@ -1,0 +1,1 @@
+Assets etc for Adobe Connect 12+
